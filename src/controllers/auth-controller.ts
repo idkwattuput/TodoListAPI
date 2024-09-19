@@ -67,7 +67,7 @@ const login = async (req: Request, res: Response) => {
       { id: isUserExist.id },
       process.env.ACCESS_TOKEN_SECRET!,
       {
-        expiresIn: "1h", // TODO: sini
+        expiresIn: "20s",
       },
     );
     const refreshToken = jwt.sign(
